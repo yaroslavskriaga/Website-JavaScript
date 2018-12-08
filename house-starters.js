@@ -111,8 +111,6 @@ function filterMembers(members) {
 
     createTable(newArray);
 
-}
-
 document.getElementById('Republican').addEventListener("click", function() {
     filterMembers(data.results[0].members);
 
@@ -128,6 +126,8 @@ document.getElementById('Independent').addEventListener("click", function() {
     filterMembers(data.results[0].members);
 
 });
+}
+
 
 
 
@@ -142,10 +142,11 @@ function filterByState(members) {
         }
     }
     createTable(filteredArray);
-}
+    filterMembers(filteredArray);
 
-
-document.getElementById('dropDown').addEventListener("change", function() {
+    document.getElementById('dropDown').addEventListener("change", function() {
     init(data.results[0].members);
 
 });
+}
+

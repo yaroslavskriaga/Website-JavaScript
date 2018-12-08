@@ -68,51 +68,6 @@ function createTable(members) {
 
 
 
-function filterMembers(members) {
-
-    var checkBoxR = document.getElementById('Republican');
-    var checkBoxD = document.getElementById('Democrat');
-    var checkBoxI = document.getElementById('Independent');
-    var newArray = [];
-    for (var i = 0; i < members.length; i++) {
-        if (members[i].party == 'R' && checkBoxR.checked) {
-            newArray.push(members[i]);
-        } else if (members[i].party == 'D' && checkBoxD.checked) {
-            newArray.push(members[i]);
-        } else if (members[i].party == 'I' && checkBoxI.checked) {
-            newArray.push(members[i]);
-        } else if (!checkBoxR.checked && !checkBoxD.checked && !checkBoxI.checked) {
-            newArray.push(members[i]);
-        }
-    }
-
-    filterByState(newArray);
-
-}
-
-document.getElementById('Republican').addEventListener("click", function() {
-    filterMembers(data.results[0].members);
-
-
-});
-document.getElementById('Democrat').addEventListener("click", function() {
-
-    filterMembers(data.results[0].members);
-
-});
-document.getElementById('Independent').addEventListener("click", function() {
-
-    filterMembers(data.results[0].members);
-
-});
-
-
-
-
-
-
-
-
 function createFilterByState(members) {
     var stateArray = [];
     var newStateArray = [];
@@ -139,6 +94,45 @@ function createFilterByState(members) {
 
 
 
+function filterMembers(members) {
+
+    var checkBoxR = document.getElementById('Republican');
+    var checkBoxD = document.getElementById('Democrat');
+    var checkBoxI = document.getElementById('Independent');
+    var newArray = [];
+    for (var i = 0; i < members.length; i++) {
+        if (members[i].party == 'R' && checkBoxR.checked) {
+            newArray.push(members[i]);
+        } else if (members[i].party == 'D' && checkBoxD.checked) {
+            newArray.push(members[i]);
+        } else if (members[i].party == 'I' && checkBoxI.checked) {
+            newArray.push(members[i]);
+        } else if (!checkBoxR.checked && !checkBoxD.checked && !checkBoxI.checked) {
+            newArray.push(members[i]);
+        }
+    }
+
+    createTable(newArray);
+
+    document.getElementById('Republican').addEventListener("click", function() {
+        filterMembers(data.results[0].members);
+
+
+    });
+    document.getElementById('Democrat').addEventListener("click", function() {
+
+        filterMembers(data.results[0].members);
+
+    });
+    document.getElementById('Independent').addEventListener("click", function() {
+
+        filterMembers(data.results[0].members);
+
+    });
+
+}
+
+
 
 
 function filterByState(members) {
@@ -152,9 +146,10 @@ function filterByState(members) {
         }
     }
     createTable(filteredArray);
+    filterMembers(filteredArray);
+
+    document.getElementById('dropDown').addEventListener("change", function() {
+        init(data.results[0].members);
+    });
+
 }
-
-
-document.getElementById('dropDown').addEventListener("change", function() {
-    init(data.results[0].members);
-});

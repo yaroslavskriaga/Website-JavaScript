@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+    background-color: ghostwhite;
+}
+
+.well {
+    background-color: whitesmoke;
+}
+
+/*FOOTER*/
+h5 {
+    text-align: center;
+}
+
+
+/*HEADER*/
+.mail {
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+button:hover {
+    background-color: lightgrey;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn-circle {
+    width: 67px;
+    height: 67px;
+    border-radius: 49px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.home {
+    color: white;
+    font-style: oblique;
+}
+
+/*HOME*/
+p {
+    text-indent: 25px;
+}
+
+#more {
+    display: none;
+}
+
+
+#more2 {
+    display: none;
+}
+
+/*FILTERS*/
+
+.filters {
+    display: flex;
+    justify-content: flex-start
+}
+
+.filters1 {
+    display: flex;
+    justify-content: flex-end
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="design.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-10">
+                    <h1><span class="glyphicon glyphicon-search"></span>TGIF Logo</h1>
+                </div>
+                <div class="mail">
+                    <a href="mailto:info@tgif.net"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a></div>
+            </div>
+        </div>
+        <nav>
+            <div class="well">
+                <div class="container">
+                    <div class="col-sm-1">
+                        <label><button class="btn-lg btn-warning btn-block btn-circle" type="button"><a href="home-starter-page.html">
+                                    <span class="home">Home</span>
+                                </a></button></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Congress 113 <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="senate-starter-page.html">Senate</a></li>
+                                <li><a href="house-starter-page.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Attendance <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="attendance-senate.html">Senate</a></li>
+                                <li><a href="attendance-house.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Party Loyalty <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="loyalty-senate.html">Senate</a></li>
+                                <li><a href="loyalty-house.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Attendance</h2>
+                    <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.
+                        The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Senate at a glance</h2>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Party</th>
+                                <th>Number of Reps</th>
+                                <th>% Voted with Prty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="Rep">
+                                <td>Republican</td>
+                            </tr>
+                            <tr id="Dem">
+                                <td>Democrat</td>
+                            </tr>
+                            <tr id="Ind">
+                                <td>Independent</td>
+                            </tr>
+                            <tr id="Total">
+                                <td>Total</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Least Engaged (Bottom 10% Attendance)</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Missed Votes</th>
+                                <th>% Missed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyBottomHouse">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h3>Most Engaged (Top 10% Attendance)</h3>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Missed Votes</th>
+                                <th>% Missed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyTopHouse">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="well">
+            <div>
+                <h5>&#169; 2016 TGIF | All Rights Reserved</h5>
+            </div>
+        </div>
+    </footer>
+    <script src="stat-attendance-house.js"></script>
+    <script src="stat-house-glance.js"></script>
+</body>
+
+</html>

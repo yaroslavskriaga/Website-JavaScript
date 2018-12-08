@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="design.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-10">
+                    <h1><span class="glyphicon glyphicon-search"></span>TGIF Logo</h1>
+                </div>
+                <div class="mail">
+                    <a href="mailto:info@tgif.net"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a></div>
+            </div>
+        </div>
+        <nav>
+            <div class="well">
+                <div class="container">
+                    <div class="col-sm-1">
+                        <label><button class="btn-lg btn-warning btn-block btn-circle" type="button"><a href="home-starter-page.html">
+                                    <span class="home">Home</span>
+                                </a></button></label>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Congress 113 <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="senate-starter-page.html">Senate</a></li>
+                                <li><a href="house-starter-page.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Attendance <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="attendance-senate.html">Senate</a></li>
+                                <li><a href="attendance-house.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle btn-block" type="button" data-toggle="dropdown">Party Loyalty <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="loyalty-senate.html">Senate</a></li>
+                                <li><a href="loyalty-house.html">House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Congressmen</h2>
+            <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.
+                Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+            <div class="filters">
+                <p1>Filter by Party:</p1>
+                <p1><input type="checkbox" id='Republican' value="R">Republican
+                    <input type="checkbox" id='Democrat' value="D">Democrat
+                    <input type="checkbox" id='Independent' value="I">Independent</p1>
+            </div>
+            <div class="filters1">
+                <p1>Filter by State:</p1>
+                <select id="dropDown">
+                    <option id='selected' value="All">Select All</option>
+                </select>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>PARTY</th>
+                        <th>STATE</th>
+                        <th>YEARS IN OFFICE</th>
+                        <th>%VOTES W/PARTY</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBodyHouse">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="well">
+            <div>
+                <h5>&#169; 2016 TGIF | All Rights Reserved</h5>
+            </div>
+        </div>
+    </footer>
+    <script src="house-starters.js"></script>
+</body>
+
+</html>
